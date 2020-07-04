@@ -27,8 +27,6 @@ function OrderFormation() {
     return listArr;
 }
 
-
-
 function StartMenuBurger() {
 
     for (let i = 0; i < 1; i++) {
