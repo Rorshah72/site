@@ -4,9 +4,9 @@ let bucket: Bucket[];
 let drinks: Drinks[];
 let user :User;
 
-function AdminMenuAddBurger(name, price, value, indexArr) {
+function AdminMenuAddBurger(name, price, value, indexIngredient) {
     let id = 1 ;
-    burger[id] = new Burger(name, id, price, value, indexArr);
+    burger[id] = new Burger(name, id, price, value, indexIngredient);
     
 }
 
@@ -27,8 +27,18 @@ function OrderFormation() {
     return listArr;
 }
 
-function BurgerConstructor() {
+function BurgerConstructor(name,price,value,indexIngredient) {
+    let id = 1;
+    burger[id] = new Burger(name, id, price, value, indexIngredient);
+    burger[id].setRole(1);
+}
 
+function AddPhoto(indexPhoto, id) {
+    burger[id].setIndexPhoto(indexPhoto);
+}
+
+function ReadPhoto(id) {
+   return burger[id].getIndexPhoto();
 }
 
 function StartMenuBurger() {
