@@ -6,7 +6,7 @@ class Burger {
     value: number;
     indexPhoto: string;
     role: number = 0;
-    ingredientIndex = new Array(40);
+    ingredientIndex: number[];
     constructor(name, id, price, value, index ){
         for (let i = 0; i < value; i++) {
             this.ingredientIndex[i] = index[i];
@@ -46,17 +46,7 @@ class Burger {
         this.ingredientIndex[this.value - 1] = IngredientIndex[this.value - 1];
     }
         getIngredientIndex() {
-        let AllIndex: string;
-            for (let i = 0; i < this.value; i++) {
-                if (i == (this.value - 1)) {
-                    AllIndex = this.ingredientIndex[i];
-                }
-                else {
-                    AllIndex = this.ingredientIndex[i] + ",";
-                }
-           
-        }
-        return AllIndex;
+        return this.ingredientIndex.join();
     }
         setRole(role) {
         this.role = role;

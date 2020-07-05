@@ -81,6 +81,10 @@ function AddIngredientToBurger(id) {
     IndexIngredient.push(id);
 }
 
+function RemoveIngredientOfBurger(id) {
+    IndexIngredient[id] = null;
+}
+
 function Main() {
     StartMenuBurger();
     StartMenuDrinks();
