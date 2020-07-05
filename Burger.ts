@@ -5,7 +5,7 @@ class Burger {
     price: number;
     value: number;
     indexPhoto: string;
-    role = 0;
+    role: number = 0;
     ingredientIndex = new Array(40);
     constructor(name, id, price, value, index ){
         for (let i = 0; i < value; i++) {

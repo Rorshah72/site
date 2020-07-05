@@ -1,13 +1,20 @@
-let IndexBasket = 0;
+let IndexBasket: number = 0;
+let IndexIngredient: number[];
 let burger: Burger[];
 let bucket: Bucket[];
 let drinks: Drinks[];
+let ingredients: Ingredient[];
 let user :User;
 
 function AdminMenuAddBurger(name, price, value, indexIngredient) {
     let id = 1 ;
     burger[id] = new Burger(name, id, price, value, indexIngredient);
     
+}
+
+function AdminMenuAddIngredients(name, price) {
+    let id = 1;
+    ingredients[id] = new Ingredient(name,price,id);
 }
 
 function FillingTheBasket(product , value) {
@@ -59,9 +66,19 @@ function StartMenuDrinks() {
     }   
 }
 
+function StartMenuIngredients() {
+    for (let i = 0; i < 1; i++) {
+        ingredients[i] = new Ingredient(1, 1 ,1 );
+    }
+}
+
 function CreateUser(name, login, secondname, password, email, phone) {
    let id = 1;
    user = new User(login, name , secondname , password, email,phone ,id);
+}
+
+function AddIngredientToBurger(id) {
+    IndexIngredient.push(id);
 }
 
 function Main() {

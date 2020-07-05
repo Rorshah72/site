@@ -2,12 +2,13 @@ class Ingredient {
     name: string;
     price: number;
     id: number;
+    indexPhoto: string;
 
     constructor(name , price , id, ) {
         this.name = name;
         this.id = id;
         this.price = price;
-        
+        this.indexPhoto = "111111111";        
     }
     
         getName() {
@@ -29,7 +30,12 @@ class Ingredient {
         getPrice() {
         return this.price;
     }
-  
+        setIndexPhoto(indexPhoto) {
+        this.indexPhoto = indexPhoto;
+    }
+        getIndexPhoto() {
+        return this.indexPhoto;
+    }
     
 
 
