@@ -20,11 +20,14 @@ function FillingTheBasket(product , value) {
 
 function OrderFormation() {
     let listArr = new Array[IndexBasket][2];
-    for (let i = IndexBasket; i >= IndexBasket; i--) {
-        listArr[i][0] = bucket[i].getProduct();
-        listArr[i][1] = bucket[i].getValue();
+    if (IndexBasket > 0) {
+        for (let i = 0; i < IndexBasket; i++) {
+            listArr[i][0] = bucket[i].getProduct();
+            listArr[i][1] = bucket[i].getValue();
+        }
+        return listArr;
     }
-    return listArr;
+    else return 0;
 }
 
 function BurgerConstructor(name,price,value,indexIngredient) {
